@@ -1,3 +1,4 @@
+
 .drop {
   color: #fff;
 
@@ -50,6 +51,7 @@
 
 }
 .drop{
+  margin-top: 50px;
   margin-left:120px;
   font-weight: 200;
   cursor: pointer;
@@ -59,7 +61,7 @@
   color:black !important;
 }
 .register{
-  margin-right: 150px;
+   margin-right: 10px; 
   font-weight: 200;
   cursor: pointer;
 
@@ -68,7 +70,7 @@
   color:black !important
 }
 .login{
-  padding-left: 850px;
+  padding-left: 800px;
   font-weight: 200;
   cursor: pointer;
 
@@ -124,7 +126,8 @@
 
 .heading-m{
   color:#d3020e !important;
-  margin-left: 50px
+  margin-left: 100px;
+  font-size: 40px;
   
 }
 
@@ -210,5 +213,209 @@
 }
 
 .paragraph-1{
-  text-align: center !important;
+  margin-left: 100px;
+  line-height: 1.6;
+
+
 }
+
+.column {
+  float: left;
+  width: 50%;
+  /* text-align: center; */
+}
+.row{
+  margin-left: 210px;
+  cursor: pointer;
+
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.dealership:hover{
+  color:red !important
+
+}
+
+.enterprise:hover{
+  color:red !important
+}
+
+.automotive:hover{
+  color:red !important
+
+}
+
+.b2bDealers:hover{
+  color:red !important
+
+}
+
+.singleLocation:hover{
+  color:red !important
+
+}
+
+.multiLocation:hover{
+  color:red !important
+
+}
+
+.wrapper-flex.margin-t100 {
+  margin-top: 63px;
+  padding-top: 1px;
+}
+
+.wrapper-flex {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -83px;
+  display: flex;
+}
+
+.heading-m text-red{
+  margin-right: 50px !important;
+
+}
+.heading-g{
+  margin-left: 100px;
+  font-size: 40px;
+  }
+
+.learnMore{
+  font-size: 14px;
+}
+
+.wrapper-flex {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -83px;
+  display: flex;
+}
+.flex-l.mw-412 {
+  width: 100%;
+  max-width: 412px;
+}
+.flex-r {
+  width: 50%;
+  text-align: right;
+}
+
+
+
+
+.container-1 {
+  display: flex;
+}
+
+.paragraph-1 {
+  flex: 1;
+  margin-right: 10px; /* Adjust the spacing between paragraphs if desired */
+}
+
+.paragraph-1:last-child {
+  margin-right: 0; /* Remove right margin from the last paragraph */
+}
+
+.detail{
+  border: 1px solid #a7a4a4;
+  padding: 10px;
+  border-radius: 25px;
+  height: 200px;
+}
+
+.section.demo {
+  background-color: #d3020e;
+  padding-top: 100px;
+  padding-bottom: 94px;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin-top: -48px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.demo-wrapper {
+  justify-content: space-between;
+  display: flex;
+}
+
+.demo-r {
+  width: 50%;
+}
+
+.button1{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width:30%;
+  height: 18%;
+  border-radius: 30px;
+}
+
+.button1:hover{
+  color:black;
+  background-color: white;
+}
+
+/* .wrapper-flex {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -83px;
+  display: flex;
+} */
+.flex-l.mw-412 {
+  width: 100%;
+  max-width: 30% ;
+}
+.flex-r {
+  width: 50%;
+  text-align: right;
+}
+.benefits{
+  margin-left: 12%;
+}
+.description{
+  margin-left: 12%;
+}
+
+
+
+
+.ticker{
+  display: flex
+}
+
+.ticker__list{
+  display :flex;
+  margin-top: 20px;
+ 
+  
+}
+
+  .ticker:hover &
+    animation-play-state paused
+  
+.ticker__item{
+  margin-right: 20px;
+}
+  
+@keyframes ticker 100% transform translateX(-100%)
