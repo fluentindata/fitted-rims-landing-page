@@ -1,8 +1,35 @@
+ "use client"
  import "./page.css"
+ import React, { useState } from 'react'
+import { useTrail, a } from '@react-spring/web'
+
+function Trail({ open, children }) {
+  const items = React.Children.toArray(children);
+  const trail = useTrail(items.length, {
+    config: { mass: 5, tension: 2000, friction: 200 },
+    opacity: open ? 1 : 0,
+    x: open ? 0 : 20,
+    height: open ? 110 : 0,
+    from: { opacity: 0, x: 20, height: 0 },
+  });
+
+  return (
+    <div>
+      {trail.map(({ height, ...style }, index) => (
+        <a.div key={index} className={page.trailsText} style={style}>
+          <a.div style={{ height }}>{items[index]}</a.div>
+        </a.div>
+      ))}
+    </div>
+  );
+}
 
 const page = () => {
+  const [open, set] = useState(true);
+
   return (
     <>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
     <title> Boost Tire Sales Online and In-store</title>
     <div className="container">
     <div className="wrapper">
@@ -18,12 +45,16 @@ const page = () => {
 <h5 className="register">Register</h5>
 </div>
 
-
+<div className={page.container} onClick={() => set((state) => !state)}>
 <div className="header-text max-w884">
+<br/><br/> <br/><br/> <br/>
+<Trail open={open}>
   <h1 className="heading-2">Tire Sales and Procurement Solutions </h1>
   <p className="paragraph-xl header">
     Maximize your tire business from sales to sourcing.&nbsp;Set your business up to win with advanced sales and procurement tools powered by real-time inventory data, in-store and online.
     </p>
+    </Trail>
+    </div>
     </div>
   
 <div className="cta-top new-home">
@@ -56,14 +87,14 @@ const page = () => {
       
     </div>
 
-    <div class="ticker">
-  <div class="ticker__list" >
-    <div class="ticker__item"><img src="https://img.clock.co.uk/250x100?text=Item 1&amp;color=f3e5f5"/></div>
-    <div class="ticker__item"><img src="https://img.clock.co.uk/300x100?text=Item 2&amp;color=ede7f6"/></div>
-    <div class="ticker__item"><img src="https://img.clock.co.uk/200x100?text=Item 3&amp;color=ffcdd2"/></div>
-    <div class="ticker__item"><img src="https://img.clock.co.uk/100x100?text=Item 4&amp;color=f8bbd0"/></div>
-    <div class="ticker__item"><img src="https://img.clock.co.uk/350x100?text=Item 5&amp;color=e8eaf6"/></div>
-    <div class="ticker__item"><img src="https://img.clock.co.uk/100x100?text=Item 6&amp;color=e3f2fd"/></div>
+    <div className="ticker">
+  <div className="ticker__list" >
+    <div className="ticker__item"><img src="https://img.clock.co.uk/250x100?text=Item 1&amp;color=f3e5f5"/></div>
+    <div className="ticker__item"><img src="https://img.clock.co.uk/300x100?text=Item 2&amp;color=ede7f6"/></div>
+    <div className="ticker__item"><img src="https://img.clock.co.uk/200x100?text=Item 3&amp;color=ffcdd2"/></div>
+    <div className="ticker__item"><img src="https://img.clock.co.uk/100x100?text=Item 4&amp;color=f8bbd0"/></div>
+    <div className="ticker__item"><img src="https://img.clock.co.uk/350x100?text=Item 5&amp;color=e8eaf6"/></div>
+    <div className="ticker__item"><img src="https://img.clock.co.uk/100x100?text=Item 6&amp;color=e3f2fd"/></div>
     
   </div>
 </div>
@@ -80,7 +111,8 @@ const page = () => {
         <p className="paragraph-1 ">Solutions made for you, your business, and your<br/> customers.</p></div>
         <div  className="flex-r">
           <img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aeac509c2f95f_solutions-audience.svg" loading="lazy" alt="Chart"/>
-          </div></div>
+          </div>
+    </div>
           <br></br><br></br><br></br>
 
           
@@ -198,8 +230,8 @@ const page = () => {
 
 
 
-<div class="container-1">
-  <div class="paragraph-1">
+<div className="container-1">
+  <div className="paragraph-1">
     <div className="detail">
     <h3>TireConnect Online</h3>
     <p >Enable customers to buy tires online <br/>without assistance in seconds</p>
@@ -208,7 +240,7 @@ const page = () => {
     <p></p>
     </div>
   </div>
-  <div class="paragraph-1">
+  <div className="paragraph-1">
   <div className="detail">
     <h3>TireConnect in Store</h3>
     <p>Enhance your customers experience by <br/> providing quick notes.</p>
@@ -216,7 +248,7 @@ const page = () => {
 
     </div>
   </div>
-  <div class="paragraph-1">
+  <div className="paragraph-1">
   <div className="detail">
     <h3>TireConnect Wheels</h3>
     <p>Sell wheels as a standalone or as a part <br/> of wheel and tire package</p>
@@ -229,8 +261,8 @@ const page = () => {
 <br/>
 
 
-<div class="container-1">
-  <div class="paragraph-1">
+<div className="container-1">
+  <div className="paragraph-1">
     <div className="detail">
     <h3>TireConnect Online</h3>
     <p >Enable customers to buy tires online <br/>without assistance in seconds</p>
@@ -239,7 +271,7 @@ const page = () => {
     <p></p>
     </div>
   </div>
-  <div class="paragraph-1">
+  <div className="paragraph-1">
   <div className="detail">
     <h3>TireConnect in Store</h3>
     <p>Enhance your customers experience by <br/> providing quick notes.</p>
@@ -247,7 +279,7 @@ const page = () => {
 
     </div>
   </div>
-  <div class="paragraph-1">
+  <div className="paragraph-1">
   <div className="detail">
     <h3>TireConnect Wheels</h3>
     <p>Sell wheels as a standalone or as a part <br/> of wheel and tire package</p>
@@ -263,20 +295,20 @@ const page = () => {
   <div className="container">
     <div className="demo-wrapper">
       <div className="demo-l">
-        <h1 className="text-white" style={{fontSize:"50px", color:"white"}}>See TireConnect in <br/>action with a demo</h1>
-        <p className="paragraph-l demo-p" style={{color:"white", lineHeight:"1.5"}}>Book a demo to discover how TireConnect’s best-in-class tire shop <br/> software can become a critical component of your tire sales strategy <br/>driving revenue, market share, and customer satisfaction.</p>
+        <h1 className="text-white" style={{fontSize:"50px", color:"white", marginLeft:"55px"}}>See TireConnect in <br/>action with a demo</h1>
+        <p className="paragraph-l demo-p" style={{color:"white", lineHeight:"1.5", marginLeft:"55px"}}>Book a demo to discover how TireConnect’s best-in-class tire shop <br/> software can become a critical component of your tire sales strategy <br/>driving revenue, market share, and customer satisfaction.</p>
         {/* <button className="button1 " style={{color:"white", backgroundColor:"black"}}>Get a Demo</button> */}
-        <button className="button1"> Get a Demo </button>
+        <button style={{marginLeft:"55px"}}className="button1"> Get a Demo </button>
 
         </div> 
         <div className="demo-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aea0b4ac2f8f0_cta-img.png" loading="lazy" alt="Devices" className="demo-img"/></div></div></div>
 </section>
 <br/><br/><br/><br/>
-<div class="wrapper-flex">
-  <div class="flex-l mw-412">
+<div className="wrapper-flex">
+  <div className="flex-l mw-412">
     <h1 className="benefits"><strong>Benefits for your Business</strong>
     </h1><p className="description ">Create faster, more accurate quotes and tire information in-store and online so you can do business smarter not harder.</p></div>
-    <div class="flex-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aeacd8bc2f963_man-chart.svg" loading="lazy" alt="Man Chart Illustration " class="man-chart"/></div></div>
+    <div className="flex-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aeacd8bc2f963_man-chart.svg" loading="lazy" alt="Man Chart Illustration " className="man-chart"/></div></div>
 
     
 

@@ -10,6 +10,8 @@
 .dropdown {
   position: relative;
   display: inline-block;
+   
+
 }
 
 .dropdown-content {
@@ -43,13 +45,19 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
-    position: relative;
-}
-.container{
-  background-color: #d3020e !important;
-  margin: -12px -8px 0px -8px
+    position: fixed;
 
+    /* z-index: 150; */
+    background-color: #d3020e;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
 }
+
 .drop{
   margin-top: 50px;
   margin-left:120px;
@@ -61,7 +69,7 @@
   color:black !important;
 }
 .register{
-   margin-right: 10px; 
+   margin-right: 10%; 
   font-weight: 200;
   cursor: pointer;
 
@@ -70,7 +78,7 @@
   color:black !important
 }
 .login{
-  padding-left: 800px;
+  margin-left: 60%;
   font-weight: 200;
   cursor: pointer;
 
@@ -332,6 +340,8 @@
   background-color: #d3020e;
   padding-top: 100px;
   padding-bottom: 94px;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 .section {
@@ -343,15 +353,13 @@
 }
 
 .container {
-  width: 100%;
-  max-width: 1170px;
-  margin-top: -48px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+   width: 100%; 
+  margin-top: -10px;
+  background-color: #d3020e !important;
+  padding-right: 16px;
+  margin-left: -8px;
 }
+
 
 .demo-wrapper {
   justify-content: space-between;
@@ -418,4 +426,27 @@
   margin-right: 20px;
 }
   
-@keyframes ticker 100% transform translateX(-100%)
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .drop,
+  .login,
+  .register {
+    margin: 5px;
+  }
+
+  .header-text {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .stats-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .row {
+    margin-left: 10px;
+  }
+}
