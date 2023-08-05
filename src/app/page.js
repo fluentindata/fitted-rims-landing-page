@@ -308,10 +308,94 @@ const page = () => {
   <div className="flex-l mw-412">
     <h1 className="benefits"><strong>Benefits for your Business</strong>
     </h1><p className="description ">Create faster, more accurate quotes and tire information in-store and online so you can do business smarter not harder.</p></div>
-    <div className="flex-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aeacd8bc2f963_man-chart.svg" loading="lazy" alt="Man Chart Illustration " className="man-chart"/></div></div>
+    <div className="flex-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aeacd8bc2f963_man-chart.svg" loading="lazy" alt="Man Chart Illustration " className="man-chart"/>
+    <br/> <br/> <br/>
+    </div>
+</div>
 
-    
+<div className="row">
+    <div className="column">
+       <h3 className="benefitsSection">Sell Tires and Wheels 24/7 </h3>
+       <p>Open all hours, your customers can shop when and how they  <br/> want to with TireConnect’s eCommerce turnkey solution. </p>
+    </div>
+    <div className="column">
+      <h3 className="benefitsSection">Real-Time Inventory</h3>
+      <p> Confidently display your on-hand and supplier inventory in real- <br/> time online and in-store, alongside tools to compare prices, <br/> customize orders, and maximize sales fast. </p>
+      <br/> <br/><br/>
+    </div>
+     
 
+    <div className="column">
+       <h3 className="benefitsSection">Boost Business  </h3>
+       <p>We give you what you need, so you can give your customers <br/> what they want—quick and easy ways to view, quote, and <br/>purchase.</p>
+    </div>
+
+    <div className="column">
+      <h3 className="benefitsSection">Instant Tire Quotes</h3>
+      <p> No more flipping through catalogs, way more solutions for fast,<br/> accurate quotes to save your customers and employee’s time.</p> 
+      <br/> <br/><br/>
+    </div>
+  </div>
+
+
+  <section className="section partner">
+    <div className="container2">
+      <div className="partner-wrapper">
+        <div className="partner-l">
+          <h2 className="text-red">Partner With <br/> TireConnect</h2>
+          <p className="paragraph-l">We’re always looking to partner with wholesale distributors,<br/> digital agencies, and software solution providers to help us drive <br/> more value to our clients.</p>
+          <div className="partner-red">
+          <p className="partner-red__p">Are you a tire/wheel wholesaler, digital agency <br/>or a software provider?</p></div>
+          <div className="partner-red">
+          <p className="partner-red__p">Are you servicing the tire or automotive<br/> industry?</p><br/></div>
+
+          <div className="partner-button__wrapper">
+            <button  className="buttonPartner" style={{color:"white", backgroundColor:"black"}}>Partner with Us</button>
+            <button className="seePartner">See Our Partners</button>
+          </div>
+        </div>
+            <div className="partner-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aea80f7c2f8fe_partners.png" loading="lazy" alt="Handshake" class="partner-img"/></div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section className="section about">
+    <div className="container3">
+      <div className="about__wrapper">
+        <div  className="about-l"style={{color:"white"}}>
+          <h2 className="text-white" style={{fontSize:"50px"}}>About us</h2>
+          <p className="paragraph-l is--light" style={{lineHeight:"1.6"}} >We’re revolutionizing the tire sales process and becoming an <br/> invaluable business partner for our clients. We provide the most<br/> advanced, easy-to-use, and feature-rich tire commerce<br/> solution on the market.<br/><br/>Our platform simplifies the path to purchase for service <br/> advisors and customers alike. TireConnect delivers all of the <br/> product information required to make an informed purchase, <br/> live inventory connectivity and much more. Clients always <br/> remain in complete control of their inventory, pricing, labor, and<br/> installation costs. </p><br/>
+          <div className="button-wrapper left">
+            <button className="button4" style={{color:"white", backgroundColor:"black"}}>Learn More About Us</button></div></div>
+            <div className="about-r"><img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aea0b4ac2f8f0_cta-img.png" loading="lazy"  alt="Devices"/></div></div></div>
+            <img src="https://uploads-ssl.webflow.com/61f95ed9bf2aea22dfc2f8b6/61f95ed9bf2aeae7dec2f920_wave_red.svg" loading="lazy" alt="" className="wave-red"/>
+  </section>
+
+  <section class="section footer">
+  <div class="container5">
+  <div class="footer-wrapper">
+  <div class="footer-l">
+  <div class="footer-logo__wrapper"><a href="/" aria-current="page" class="footer-logo w-inline-block w--current"></a>
+  <p class="footer-l__p">The TireConnect team is committed to helping tire <br/> dealers of all sizes drive efficiency, compete in the online <br/> marketplace and most importantly sell more tires.</p>
+  <button class="button6">Shop for Tires Near Me</button><a target="_blank" class="linkedin w-inline-block"><div class="linkedin-icon__wrapper">
+ </div>
+  <p class="linkedin__p">Follow us on LinkedIn</p></a></div><div class="footer-form__wrapper">
+  <section id="subscribe-form" class="footer-form">
+  <div class="form--footer__wrapper" ><p style={{color:"red"}} class="footer-form__heading">Sign Up for Our Newsletter</p>
+  <p class="footer-form__p">Email Address <span class="red-span">*</span></p>
+  <div class="form-block w-form"><form id="wf-form-Subscribe" name="wf-form-Subscribe" data-name="Subscribe" method="get" class="subscribe-form-flex"  aria-label="Subscribe">
+  <div class="subscribe-form-input-wrapper">
+  <input  type="email" class="email-input w-input" maxlength="256" name="Subscriber-Email-2" data-name="Subscriber Email 2" placeholder="johndoe@email.com" id="Subscriber-Email-2" required=""/></div><br/>
+  <button value="Subscribe" class="button7">Subscribe</button></form>
+  <div class="w-form-done" tabindex="-1" role="region" aria-label="Subscribe success">
+  <div>Thank you! Your submission has been received!</div></div>
+  <div class="w-form-fail" tabindex="-1" role="region" aria-label="Subscribe failure">
+  <div>Oops! Something went wrong while submitting the form.</div></div></div></div></section>
+  <p class="copyright">Copyright © Bridgestone -TireConnect 2023 | <a class="pp-link">Privacy Policy</a> | <a class="tof-link">Terms of Service</a></p></div></div>
+  </div></div>
+    </section>
     </>
   )
 }
